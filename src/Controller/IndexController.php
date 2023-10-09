@@ -17,22 +17,22 @@ class IndexController extends AbstractController
     #[Route(path: '/', name: 'index')]
     public function indexAction(Request $request): Response
     {
-        $contactForm = $this->createForm(ContactType::class);
+        $form = $this->createForm(ContactType::class);
 
-        $contactForm->handleRequest($request);
+        $form->handleRequest($request);
 
-        if ($contactForm->isSubmitted() && $contactForm->isValid()) {
-            $data = $contactForm->getData();
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
             $this->repository->add($data);
             $this->repository->flush();
-            $this->addFlash('success', 'Erfolgreich gespeichert!');
+            $this->addFlash('SUCCESS', 'Erfolgreich gespeichert!');
             return $this->redirectToRoute('index');
         }
 
         return $this->render(
             'index.html.twig',
             [
-                'contactForm' => $contactForm
+                'contactForm' => $form
             ]
         );
     }

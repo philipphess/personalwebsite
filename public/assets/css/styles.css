@@ -30,13 +30,15 @@ header {
     flex-wrap: wrap;
 }
 
-.navi_button {
+.navi_button img {
     position: fixed;
     top: 0px;
     right: 0px;
+}
+
+.navi_button {
     width: 30px;
     height: 30px;
-    background-image: url('img/navi_button.png');
     background-size: cover;
     background-color: transparent;
     border: none;
@@ -274,19 +276,20 @@ nav {
     height: 500px;
 }
 
-.contact_container {
+#section_contact form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact_container input {
+
+#section_contact form input {
     display: block;
     margin-bottom: 15px;
     width: 400px;
 }
 
-.contact_container h2 {
+#section_contact form h2 {
     font-size: 65px;
     text-align: center;
     margin-bottom: 25px;
@@ -302,18 +305,18 @@ input:focus {
     outline: none;
 }
 
-.contact_button {
+#section_contact form button {
     color: var(--text-color-dark);
     font-family: 'Courier New', Courier, monospace;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.contact_button:hover {
+#section_contact form button:hover {
     background-color: var(--main-brand-color);
     color: var(--text-color);
 }
@@ -364,6 +367,9 @@ input:focus {
     font-weight: bold;
 }
 
+#section_contact .test {
+    background-color: #121212;
+}
 
 @media(max-width: 800px) {
     .body {
@@ -454,11 +460,11 @@ input:focus {
         grid-template-columns: 100%;
     }
 
-    .contact_container input {
+    #section_contact form input {
         width: 230px;
     }
 
-    .contact_container form {
+    #section_contact form {
         text-align: center;
     }
 

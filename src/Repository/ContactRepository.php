@@ -10,7 +10,7 @@ class ContactRepository extends ServiceEntityRepository
 {
     public function __construct(private readonly ManagerRegistry $registry)
     {
-        parent::__construct($this->registry, GuestBookEntity::class);
+        parent::__construct($this->registry, ContactEntity::class);
     }
     public function add(ContactEntity $contactEntity): void
     {
