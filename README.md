@@ -14,3 +14,10 @@ db:
 
 go to db: 
 1. ddev exec mariadb
+
+SQL:
+1. SHOW DATABASES;
+2. USE db;
+3. SHOW TABLES;
+4. SELECT * FROM ???db_table???;
+- Example: contact_entity
