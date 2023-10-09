@@ -11,3 +11,6 @@
 db:
 1. ddev exec bin/console make:migration
 2. ddev exec bin/console doctrine:migrations:migrate
+
+go to db: 
+1. ddev exec mariadb
