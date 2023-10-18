@@ -20,4 +20,4 @@ SQL:
 2. USE db;
 3. SHOW TABLES;
 4. SELECT * FROM ???db_table???;
-- Example: contact_entity
+- Example: user_entity
