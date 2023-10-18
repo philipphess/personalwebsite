@@ -1,0 +1,125 @@
+#section_contact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 40px;
+    height: 500px;
+}
+
+#section_contact h2 {
+    text-align: center;
+    font-size: 65px;
+    margin-bottom: 30px;
+}
+
+#section_contact form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#section_contact form input {
+    display: block;
+    margin-bottom: 15px;
+    width: 400px;
+}
+
+#section_contact form h2 {
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input {
+    padding: 10px;
+}
+
+input:focus {
+    border: 3px solid var(--secondary-text-color);
+    border-color: var(--main-brand-color);
+    outline: none;
+}
+
+#section_contact form button {
+    color: var(--text-color-dark);
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#section_contact form button:hover {
+    background-color: var(--main-brand-color);
+    color: var(--text-color);
+}
+
+.success {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    background-color: #ffebee;
+    border: 1px solid green;
+    color: green;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 650px;
+    height: 70px;
+}
+
+.error {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    background-color: #ffebee;
+    border: 1px solid #e53935;
+    color: #e53935;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 650px;
+    height: 70px;
+}
+
+.error i {
+    margin-top: 8px;
+    margin-right: 8px;
+    color: #e53935;
+}
+
+.success i {
+    margin-top: 8px;
+    margin-right: 8px;
+    color: green;
+}
+
+@media(max-width: 800px) { 
+    
+    #section_contact {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #section_contact form input {
+        width: 230px;
+    }
+
+    #section_contact form {
+        text-align: center;
+    }
+
+    .error {
+        width: 350px;
+        height: 120px;
+    }
+
+    .success {
+        width: 350px;
+        height: 120px;
+    }
+}

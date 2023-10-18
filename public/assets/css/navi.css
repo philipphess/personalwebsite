@@ -1,0 +1,88 @@
+.navi_button img {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.navi_button {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    z-index: 50;
+}
+
+.navibar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 280px;
+    height: 260px;
+    background-color: var(--light-secondary-color);
+    transition: left 0.3s ease;
+    z-index: 49;
+}
+
+.navibar li {
+    list-style: none;
+    width: 300px;
+}
+
+.navibar li a {
+    position: relative;
+    display: flex;
+    font-size: 4rem;
+    line-height: 1em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navibar li a span {
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navibar li a span .out {
+    display: inline-flex;
+}
+
+.navibar li a:hover span .out {
+    transform: translateY(-100%);
+}
+
+.navibar li a span .in {
+    position: absolute;
+    left: 0;
+    color: var(--main-brand-color);
+    transform: translateY(100%);
+}
+
+.navibar li a:hover span .in {
+    transform: translateY(0);
+}
+
+
+@media(max-width: 800px) {
+
+    .navibar {
+        width: 213px;
+        height: 200px;
+    }
+
+    .navibar li a {
+        font-size: 3rem;
+    }
+
+    nav {
+        margin-bottom: 50px;
+    }
+}

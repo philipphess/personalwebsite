@@ -2,21 +2,23 @@
 
 namespace App\Repository;
 
-use App\Entity\ContactEntity;
+use App\Entity\UserEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
-class ContactRepository extends ServiceEntityRepository
+class UserRepository extends ServiceEntityRepository
 {
     public function __construct(private readonly ManagerRegistry $registry)
     {
-        parent::__construct($this->registry, ContactEntity::class);
+        parent::__construct($this->registry, UserEntity::class);
     }
-    public function add(ContactEntity $contactEntity): void
+
+    public function add(UserEntity $UserEntity): void
     {
         $manager = $this->getEntityManager();
-        $manager->persist($contactEntity);
+        $manager->persist($UserEntity);
     }
+
     public function flush(): void
     {
         $this->getEntityManager()->flush();

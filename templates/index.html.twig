@@ -64,22 +64,20 @@
 			</div>
 		</div>
 	</section>
-	<button><a href="login">login</a></button>
 	<section id="section_service"></section>
 	<section id="section_contact">
-		<div>
-			<h2>Contact</h2>
-			{{ form(contactForm) }}
-				{% if app.request.method == 'POST' and app.request.request.all is not empty %}
-					<script src="{{ asset('assets/js/jumpForm.js') }}"></script>
-					{% for label, messages in app.flashes %}
-						{% for message in messages %}
-							<div class="success_field">{{message}}</div>
-						{% endfor %}
-					{% endfor %}
-				{% endif %}
-			</div>
-			<div class="test">Testtest</div>
-		</section>
+        <div>
+            <h2>Contact</h2>
+            {{ form(UserForm) }}
+            
+            {% for label, messages in app.flashes %}
+                {% for message in messages %}
+                    {# Check the flash type and set corresponding class #}
+                    <div class="{{ label }}">{{ message }}</div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="test">Testtest</div>
+    </section>
 		<footer></footer>
 	{% endblock %}
