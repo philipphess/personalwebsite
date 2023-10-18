@@ -7,6 +7,7 @@
 6. ddev composer require symfony/validator
 7. ddev composer require symfony/orm-pack
 8. ddev composer require --dev symfony/maker-bundle
+9. ddev composer require phpunit/phpunit
 
 db:
 1. ddev exec bin/console make:migration
