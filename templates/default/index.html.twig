@@ -37,6 +37,13 @@
 			</div>
 		</div>
 	</header>
+	{% if app.user %}
+		<div class="mb-3">
+			You are logged in as
+			{{ app.user.userIdentifier }},
+			<a href="{{ path('app_logout') }}">Logout</a>
+		</div>
+	{% endif %}
 	<section id="section_about">
 		<div class="section_about_text">
 			<h2>About me</h2>
@@ -46,38 +53,22 @@
 			<h2>Lifeline</h2>
 			<div class="lifeline_container">
 				<div class="lifeline_item">
-					2016 - 2019<br/>Nils Holger Moormann GmbH
-				</div>
-				<div class="lifeline_item">Ausbildung: Fachkraft für Lagerlogistik</div>
-				<div class="lifeline_item">
-					2019 - 2020<br/>Nils Holger Moormann GmbH
-				</div>
-				<div class="lifeline_item">Fachkraft für Lagerlogistik</div>
-				<div class="lifeline_item">
 					2020 - 2022<br/>IFB Berufsfachschule
 				</div>
 				<div class="lifeline_item">Abschluss: Informatikassistent</div>
 				<div class="lifeline_item">
-					Seit 2022<br/>boerse.de Group AG
+					2022 - 2023<br/>boerse.de Group AG
+				</div>
+				<div class="lifeline_item">Ausbildung: Fachinformatiker für Anwendungsentwicklung</div>
+				<div class="lifeline_item">
+					Seit 2023<br/>DGTLS GmbH
 				</div>
 				<div class="lifeline_item">Ausbildung: Fachinformatiker für Anwendungsentwicklung</div>
 			</div>
 		</div>
 	</section>
+	<a href="login" class="btn btn-primary btn-lg">Login</a>
+	<a href="register" class="btn btn-primary btn-lg">Register</a>
 	<section id="section_service"></section>
-	<section id="section_contact">
-        <div>
-            <h2>Contact</h2>
-            {{ form(UserForm) }}
-            
-            {% for label, messages in app.flashes %}
-                {% for message in messages %}
-                    {# Check the flash type and set corresponding class #}
-                    <div class="{{ label }}">{{ message }}</div>
-                {% endfor %}
-            {% endfor %}
-        </div>
-        <div class="test">Testtest</div>
-    </section>
-		<footer></footer>
-	{% endblock %}
+	<footer></footer>
+{% endblock %}

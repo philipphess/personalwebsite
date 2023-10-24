@@ -1,0 +1,39 @@
+#section_about {
+    padding: 100px 0;
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.section_about_text {
+    text-align: center;
+    margin: 30px;
+}
+
+.section_about_text p {
+    text-align: justify;
+    line-height: 175%;
+}
+
+.section_about_text h2 {
+    font-size: 65px;
+}
+
+
+.error i.fa-exclamation-circle:before {
+    content: "\f06a";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#section_register .test {
+    background-color: #121212;
+}
+
+@media(max-width: 800px) { 
+    #section_about {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
+

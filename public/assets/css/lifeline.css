@@ -1,0 +1,42 @@
+.lifeline {
+    text-align: center;
+    margin: 30px;
+}
+
+.lifeline h2 {
+    font-size: 65px;
+    width: 100%;
+    text-align: center;
+}
+
+.lifeline p {
+    text-align: justify;
+    line-height: 175%;
+}
+
+.lifeline_container {
+    display: grid;
+    grid-template-columns: repeat(2, 14fr);
+    grid-auto-rows: 70px;
+    gap: 10px;
+    background-color: var(--main-brand-color);
+}
+
+.lifeline_item {
+    color: white;
+    padding: 10px;
+    background-color: var(--primary-color);
+    text-align: left;
+}
+
+@media(max-width: 800px) {
+
+    .lifeline_container {
+        grid-auto-rows: 85px;
+    }
+
+    .lifeline_container {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+}
