@@ -1,4 +1,4 @@
-# personalwebsite
+# SetUp
 1. ddev composer create symfony/skeleton
 2. ddev composer require twig
 3. ddev composer require symfony/asset
