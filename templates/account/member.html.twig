@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show Users
+{% endblock %}
+{% block body %}
+	{% if 'ROLE_MEMBER' in app.user.roles %}
+		<div class="mb-3">
+			You are logged in as
+			{{ app.user.userIdentifier }},
+			<a href="{{ path('app_logout') }}">Logout</a>
+		</div>
+		<br>
+		<a href="showusers" class="btn btn-primary btn-lg">show users</a>
+		<br>
+		<a href="finduser" class="btn btn-primary btn-lg">find user</a>
+		<p>https://personalwebsite.ddev.site/finduser/peter@meter.de</p>
+	{% else %}
+		<h1>You dont have the Permission!</h1>
+	{% endif %}
+{% endblock %}

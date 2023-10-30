@@ -12,7 +12,6 @@
 			<th>firstname</th>
             <th>lastname</th>
 			<th>Email</th>
-			<!-- Füge hier weitere Spalten für zusätzliche Benutzerdaten hinzu -->
 		</tr>
 
 		{% for user in users %}
@@ -21,7 +20,6 @@
 				<td>{{ user.firstname }}</td>
                 <td>{{ user.lastname }}</td>
 				<td>{{ user.email }}</td>
-				<!-- Füge hier weitere Zellen für zusätzliche Benutzerdaten hinzu -->
 			</tr>
 		{% endfor %}
 	</table>

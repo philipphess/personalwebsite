@@ -13,7 +13,7 @@ class UserController extends AbstractController
     public function show(UserRepository $userRepository): Response
     {
         $users = $userRepository->findAllUsers();
-        return $this->render('user/show.html.twig', ['users' => $users]);
+        return $this->render('account/show.html.twig', ['users' => $users]);
     }
 
     #[Route(path: '/finduser/{email}', name: 'finduser')]
@@ -21,6 +21,6 @@ class UserController extends AbstractController
     {
         $user = $userRepository->findUserByEmail($email);
     
-        return $this->render('user/find.html.twig', ['users' => [$user]]);
+        return $this->render('account/find.html.twig', ['users' => [$user]]);
     }
 }

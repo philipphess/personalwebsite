@@ -41,10 +41,12 @@
 		<div class="mb-3">
 			You are logged in as
 			{{ app.user.userIdentifier }},
-			<a href="showusers" class="btn btn-primary btn-lg">show users</a>
-				<a href="finduser" class="btn btn-primary btn-lg">find user</a>
+			<a href="member">member</a><br>
 			<a href="{{ path('app_logout') }}">Logout</a>
 		</div>
+	{% else %}
+		<a href="login" class="btn btn-primary btn-lg">Login</a>
+		<a href="register" class="btn btn-primary btn-lg">Register</a>
 	{% endif %}
 	<section id="section_about">
 		<div class="section_about_text">
@@ -69,8 +71,6 @@
 			</div>
 		</div>
 	</section>
-	<a href="login" class="btn btn-primary btn-lg">Login</a>
-	<a href="register" class="btn btn-primary btn-lg">Register</a>
 	<section id="section_service"></section>
 	<footer></footer>
 {% endblock %}
